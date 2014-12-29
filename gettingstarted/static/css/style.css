@@ -1,9 +1,10 @@
 body {
-     font-family: arial;
-     background-color: rgb(185,179,175);
+     font-family: Arial;
+     background-color: #e1ddda;
      }
 h1 {
-    color: #0088dd;}
+    color: #0088dd;
+    text-shadow: 2px 2px 3px #666666;}
 
 a {
    text-decoration: none;
@@ -11,3 +12,22 @@ a {
 a:hover {
    text-decoration: underline;}
 
+table {
+       width: 700px;}
+th, td {
+       padding: 7px 10px 10px 10px; }
+th {
+    
+    letter-spacing: 0.1em;
+    font-size: 90%;
+    border-bottom: 2px solid#111111;
+    border-top: 1px solid #999;
+    text-align: left;}
+tr {
+    background-color: #aaaaaa;}
+
+img.small {
+           border: 5px solid white;
+           padding: 5px;
+           width: 300px;
+           height: 200px;}
