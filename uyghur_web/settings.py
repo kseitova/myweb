@@ -1,5 +1,5 @@
 """
-Django settings for gettingstarted project.
+Django settings for uyghur_web project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.6/topics/settings/
@@ -13,6 +13,7 @@ import os
 import dj_database_url
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+UYGHUR_WEB_DIR = os.path.join(BASE_DIR, 'uyghur_web')
 
 
 # Quick-start development settings - unsuitable for production
@@ -26,6 +27,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY', DEFAULT_SECRET_KEY)
 DEBUG = True
 
 TEMPLATE_DEBUG = True
+TEMPLATE_DIRS = (
+    os.path.join(UYGHUR_WEB_DIR, 'templates'),
+)
 
 ALLOWED_HOSTS = []
 
@@ -39,7 +43,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'hello'
+    'uyghur_web'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -51,9 +55,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'gettingstarted.urls'
+ROOT_URLCONF = 'uyghur_web.urls'
 
-WSGI_APPLICATION = 'gettingstarted.wsgi.application'
+WSGI_APPLICATION = 'uyghur_web.wsgi.application'
 
 
 # Database
@@ -83,9 +87,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
-STATIC_URL = '/static/'
-
-
 # Parse database configuration from $DATABASE_URL
 DATABASES['default'] =  dj_database_url.config()
 
@@ -96,10 +97,10 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 ALLOWED_HOSTS = ['*']
 
 # Static asset configuration
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(UYGHUR_WEB_DIR, 'static'),
 )
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
