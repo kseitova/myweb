@@ -5,8 +5,8 @@ from django.http import HttpResponse
 def index(request):
     return render(request, 'Main_page.html')
 
-def suggestion(request):
-    return render(request, 'suggestions.html')
+def event_form(request):
+    return render(request, 'event_form.html')
 
 
 def create_suggestion(request):
