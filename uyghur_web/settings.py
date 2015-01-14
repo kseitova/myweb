@@ -101,24 +101,7 @@ STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-<<<<<<< HEAD:gettingstarted/settings.py
-    os.path.join(BASE_DIR, 'static'),
-)
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
     os.path.join(UYGHUR_WEB_DIR, 'static'),
 )
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
->>>>>>> 30403f3d0f1469dacfe54ac09d5c546aea55eb9d:uyghur_web/settings.py
+
