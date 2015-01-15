@@ -9,7 +9,7 @@ def event_form(request):
     return render(request, 'event_form.html')
 
 
-def create_suggestion(request):
-	print request.POST
-	return HttpResponse("cool")
+#def create_suggestion(request):
+#	print request.POST
+#	return HttpResponse("cool")
 
